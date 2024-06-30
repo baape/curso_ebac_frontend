@@ -101,12 +101,13 @@ section .container {
 }
 
 .social-links img {
-    height: 24px;
+    width: 30px; 
+    height: auto;
 }
 
 .social-links li {
     display: inline;
-    margin-right: 8px;
+    margin-right: 16px;
 }
 
 .social-links a {
