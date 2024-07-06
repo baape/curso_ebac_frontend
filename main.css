@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    text-align: center;
+    display: block;
+}
+
+ form button {
+    background-color: rgb(250, 153, 8);
+    color: white;
+    font-size: large;
+    width: 320px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+form input {
+    display: grid;
+    width: 320px;
+    height: 32px;
+    margin: 8px auto;
+}
