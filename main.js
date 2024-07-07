@@ -1,20 +1,23 @@
-const form = document.getElementById('form-principal');
-
-
-form.addEventListener('submit',function(e){
+const form = document.getElementById('form-atividade');
+let linhas = '';
+form.addEventListener('submit', function(e){
     e.preventDefault();
 
-let campoA = (document.getElementById('campoA').value);
-let campoB = (document.getElementById('campoB').value);
+    const inputNomeAtividade = document.getElementById('nome-atividade');
+    const inputNotaAtividade = document.getElementById('nota-atividade');
 
-if (campoB>campoA){
-    alert("Formulário Válido: O Campo B é maior que o Campo A");
-}else {
-    alert("Formulário Inválido: O Campo B deve ser maior que o Campo A")
-}
+    let linha = `<tr>`
+    linha += `<td>${inputNomeAtividade.value}</td>`;
+    linha += `<td>${inputNotaAtividade.value}</td>`;
+    linha += `<td>${inputNotaAtividade.value >= 7 ? 'Aprovado' : 'Reprovado'}</td>`;
+    linha += `</tr>`;
+
+    linhas += linha;
+
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = linhas;  
+
 
 
 })
 
-
-console.log(form)
